@@ -31,7 +31,6 @@ public class HomeController {
 
     @RequestMapping(method = RequestMethod.GET, value="/{id}")
     public String getMonthlyBook(@PathVariable("id") String id, Model model) {
-        System.out.println("********getMonthlyBook: " + id);
         String isbn = id;
         System.out.println(id);
         
