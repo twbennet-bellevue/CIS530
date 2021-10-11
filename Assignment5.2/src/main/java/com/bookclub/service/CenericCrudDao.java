@@ -1,0 +1,12 @@
+package com.bookclub.service;
+
+import java.util.List;
+
+public interface CenericCrudDao<E,K> {
+    public List<E> list(); //Return a list of objects of type E.
+    public E find(K key); //Return an object of type E by type K value.
+
+    public void add(E entity); // Adds an object of type E where a match doesn't occur.
+    public void update(E entity); // Updates an object of type E where a match occurs.
+    public boolean remove(E entity); //Removes an object of type E where a match occurs.
+}
