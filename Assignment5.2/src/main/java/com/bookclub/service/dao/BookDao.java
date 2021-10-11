@@ -1,4 +1,4 @@
-package com.bookclub.dao;
+package com.bookclub.service.dao;
 
 import com.bookclub.model.Book;
 import com.bookclub.service.GenericDao;

@@ -2,8 +2,15 @@ package com.bookclub.model;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document(collection = "wishlist")
 public class WishlistItem {
+    
+    @Id
+    private String id;
+
     @NotNull
     @NotEmpty(message = "ISBN is a required field.")
     private String isbn;
@@ -12,9 +19,11 @@ public class WishlistItem {
     @NotEmpty(message = "Title is a required field.")
     private String title;
 
+    
+
     public WishlistItem() {
-        this.isbn = "000";
-        this.title = "default";
+        this.isbn = "";
+        this.title = "";
     }
 
     public WishlistItem(String isbn, String title) {
@@ -38,9 +47,17 @@ public class WishlistItem {
         return this.title;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getId() {
+        return this.id;
+    }
+
     @Override
     public String toString() {
-        return "WishlistItem{=<" + this.isbn + ">, title=<" + this.title + ">}";
+        return String.format("WishlistItem{id=%s, isbn=%s, title=%s", id, isbn, title);
     }
 
 }

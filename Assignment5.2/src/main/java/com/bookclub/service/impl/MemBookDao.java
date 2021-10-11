@@ -3,8 +3,8 @@ package com.bookclub.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.bookclub.dao.BookDao;
 import com.bookclub.model.Book;
+import com.bookclub.service.dao.BookDao;
 
 public class MemBookDao implements BookDao {
 
