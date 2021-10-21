@@ -1,27 +1,40 @@
 package com.bookclub.model;
 
-import java.util.List;
-
 public class Book {
     private String isbn;
     private String title;
     private String description;
     private int numOfPages;
-    private List<String> authors;
+    private String infoUrl;
 
     public Book() {
         this.isbn = "";
         this.title = "";
         this.description = "";
         this.numOfPages = 0;
+        this.infoUrl = "";
     }
 
-    public Book(String isbn, String title, String description, int numOfPages, List<String> authors) {
+    public Book(String isbn, String title, String description, String infoUrl, int numOfPages) {
         this.isbn = isbn;
         this.title = title;
         this.description = description;
         this.numOfPages = numOfPages;
-        this.authors = authors;
+        this.infoUrl = infoUrl;
+    }
+
+    public Book(String isbn, String title, String infoUrl) {
+        this.isbn = isbn;
+        this.title = title;
+        this.infoUrl = infoUrl;
+    }
+
+    public String getInfoUrl() {
+        return this.infoUrl;
+    }
+
+    public void setInfoUrl(String infoUrl) {
+        this.infoUrl = infoUrl;
     }
 
     public String getIsbn() {
@@ -56,21 +69,14 @@ public class Book {
         this.numOfPages = numOfPages;
     }
 
-    public List<String> getAuthors() {
-        return this.authors;
-    }
-
-    public void setAuthors(List<String> authors) {
-        this.authors = authors;
-    }
-
     @Override
     public String toString() {
         String temp = "Book{isbn=<" + this.isbn + ">," +
                       "title=<" + this.title + ">," +
                       "description=<" + this.description +">," +
-                      "numOfPages=<" + this.numOfPages + ">," + 
-                      "authors=<" + this.authors + "}";
+                      "infoUrl=<" + this.infoUrl + ">," +
+                      "numOfPages=<" + this.numOfPages + ">" + 
+                      "}";
         return temp;
     }
 
