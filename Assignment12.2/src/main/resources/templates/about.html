@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bookclub | About Us.</title>
+
+    <!-- Bootstrap StyleSheet CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+          integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+          crossorigin="anonymous">
+
+</head>
+<body>
+    <div th:insert="~{fragments/header :: header}"></div>
+    <div class="container py-5" style="width: 50%;">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1>About Us.</h1>
+            </div>
+        </div>
+
+        <br /><bnr />
+        <!-- start of the row -->
+        <div class="row">
+            <!-- start of the six column -->
+            <div class="col-12">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <h1>
+                            <i class="fas fa-book-open text-secondary"></i>
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-12">
+                        <ul class="list-group">
+                            <li class="list-group-item border-0">
+                                Bellevue University started the Bookclub web application as an additional resource
+                                to assist students with their higher education learning. 
+                            </li>
+                            <li class="list-group-item border-0">
+                                We create an open atmosphere for collaboration, sharing, and collective resources to help students be more successful.
+                                We believe that by empowering students with the ability to partake in the community with additional resources
+                                they can help answer their own questions and assist other students as well.
+                            </li>
+                            <li  class="list-group-item border-0">
+                                Bellevue University Bookclub - Providing open collaboration solutions since 2021.
+                            </li>
+
+                            <li  class="list-group-item border-0">
+                                <a href="https://www.bellevue.edu/about/about-us/history/" >Bellevue University History</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!-- end of six column -->
+        </div>
+        <!-- end of the row -->
+    </div>
+    <div th:insert="~{fragments/footer :: footer}"></div>
+    <div th:insert="~{fragments/scriptFooter :: scriptFooter}"></div>
+</body>
+</html>
